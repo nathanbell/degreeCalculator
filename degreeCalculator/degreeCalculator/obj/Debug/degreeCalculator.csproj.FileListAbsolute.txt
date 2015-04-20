@@ -1,1 +1,10 @@
 F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\bin\Debug\degreeCalculator.exe.config
+F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\bin\Debug\degreeCalculator.exe
+F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\bin\Debug\degreeCalculator.pdb
+F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\obj\Debug\degreeCalculator.csprojResolveAssemblyReference.cache
+F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\obj\Debug\degreeCalculator.Properties.Resources.resources
+F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\obj\Debug\degreeCalculator.csproj.GenerateResource.Cache
+F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\obj\Debug\degreeCalculator.exe
+F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\obj\Debug\degreeCalculator.pdb
+F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\obj\Debug\degreeCalculator.buildCourseForm.resources
+F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\obj\Debug\degreeCalculator.mainForm.resources
