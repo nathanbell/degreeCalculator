@@ -8,3 +8,4 @@ F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\obj\Debug
 F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\obj\Debug\degreeCalculator.pdb
 F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\obj\Debug\degreeCalculator.buildCourseForm.resources
 F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\obj\Debug\degreeCalculator.mainForm.resources
+F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\obj\Debug\degreeCalculator.addModuleForm.resources

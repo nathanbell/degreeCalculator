@@ -21,5 +21,19 @@ namespace degreeCalculator
         {
 
         }
+
+        private void courseNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void createCourseButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            mainForm main = new mainForm();
+            main.ShowDialog();
+            this.Close();
+            
+        }
     }
 }

@@ -30,13 +30,27 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabOne = new System.Windows.Forms.TabPage();
-            this.tabTwo = new System.Windows.Forms.TabPage();
-            this.tabThree = new System.Windows.Forms.TabPage();
-            this.tabFour = new System.Windows.Forms.TabPage();
-            this.tabFive = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.welcomeTextLabel = new System.Windows.Forms.Label();
             this.buildCourseButton = new System.Windows.Forms.Button();
+            this.tabTwo = new System.Windows.Forms.TabPage();
+            this.addFourModuleButton = new System.Windows.Forms.Button();
+            this.levelFourLabel = new System.Windows.Forms.Label();
+            this.tabThree = new System.Windows.Forms.TabPage();
+            this.addFiveModuleButton = new System.Windows.Forms.Button();
+            this.levelFiveLabel = new System.Windows.Forms.Label();
+            this.tabFour = new System.Windows.Forms.TabPage();
+            this.addSixModuleButton = new System.Windows.Forms.Button();
+            this.levelSixLabel = new System.Windows.Forms.Label();
+            this.tabFive = new System.Windows.Forms.TabPage();
+            this.summaryTitleLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabOne.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabTwo.SuspendLayout();
+            this.tabThree.SuspendLayout();
+            this.tabFour.SuspendLayout();
+            this.tabFive.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -54,6 +68,8 @@
             // 
             // tabOne
             // 
+            this.tabOne.Controls.Add(this.pictureBox1);
+            this.tabOne.Controls.Add(this.welcomeTextLabel);
             this.tabOne.Controls.Add(this.buildCourseButton);
             this.tabOne.Location = new System.Drawing.Point(4, 22);
             this.tabOne.Name = "tabOne";
@@ -63,8 +79,40 @@
             this.tabOne.Text = "Home";
             this.tabOne.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::degreeCalculator.Properties.Resources.logofinal;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(-4, -22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(468, 124);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // welcomeTextLabel
+            // 
+            this.welcomeTextLabel.AutoSize = true;
+            this.welcomeTextLabel.Location = new System.Drawing.Point(35, 105);
+            this.welcomeTextLabel.Name = "welcomeTextLabel";
+            this.welcomeTextLabel.Size = new System.Drawing.Size(176, 13);
+            this.welcomeTextLabel.TabIndex = 1;
+            this.welcomeTextLabel.Text = "Welcome to the Degree Calculator. ";
+            this.welcomeTextLabel.Click += new System.EventHandler(this.welcomeTextLabel_Click);
+            // 
+            // buildCourseButton
+            // 
+            this.buildCourseButton.Location = new System.Drawing.Point(38, 323);
+            this.buildCourseButton.Name = "buildCourseButton";
+            this.buildCourseButton.Size = new System.Drawing.Size(75, 23);
+            this.buildCourseButton.TabIndex = 0;
+            this.buildCourseButton.Text = "Build Course";
+            this.buildCourseButton.UseVisualStyleBackColor = true;
+            this.buildCourseButton.Click += new System.EventHandler(this.button1_Click);
+            // 
             // tabTwo
             // 
+            this.tabTwo.Controls.Add(this.addFourModuleButton);
+            this.tabTwo.Controls.Add(this.levelFourLabel);
             this.tabTwo.Location = new System.Drawing.Point(4, 22);
             this.tabTwo.Name = "tabTwo";
             this.tabTwo.Padding = new System.Windows.Forms.Padding(3);
@@ -73,8 +121,30 @@
             this.tabTwo.Text = "Level Four";
             this.tabTwo.UseVisualStyleBackColor = true;
             // 
+            // addFourModuleButton
+            // 
+            this.addFourModuleButton.Location = new System.Drawing.Point(23, 326);
+            this.addFourModuleButton.Name = "addFourModuleButton";
+            this.addFourModuleButton.Size = new System.Drawing.Size(75, 23);
+            this.addFourModuleButton.TabIndex = 1;
+            this.addFourModuleButton.Text = "Add Module";
+            this.addFourModuleButton.UseVisualStyleBackColor = true;
+            this.addFourModuleButton.Click += new System.EventHandler(this.addFourModuleButton_Click);
+            // 
+            // levelFourLabel
+            // 
+            this.levelFourLabel.AutoSize = true;
+            this.levelFourLabel.Location = new System.Drawing.Point(20, 21);
+            this.levelFourLabel.Name = "levelFourLabel";
+            this.levelFourLabel.Size = new System.Drawing.Size(100, 13);
+            this.levelFourLabel.TabIndex = 0;
+            this.levelFourLabel.Text = "Level Four Modules";
+            this.levelFourLabel.Click += new System.EventHandler(this.label1_Click);
+            // 
             // tabThree
             // 
+            this.tabThree.Controls.Add(this.addFiveModuleButton);
+            this.tabThree.Controls.Add(this.levelFiveLabel);
             this.tabThree.Location = new System.Drawing.Point(4, 22);
             this.tabThree.Name = "tabThree";
             this.tabThree.Size = new System.Drawing.Size(464, 365);
@@ -82,8 +152,30 @@
             this.tabThree.Text = "Level Five";
             this.tabThree.UseVisualStyleBackColor = true;
             // 
+            // addFiveModuleButton
+            // 
+            this.addFiveModuleButton.Location = new System.Drawing.Point(22, 329);
+            this.addFiveModuleButton.Name = "addFiveModuleButton";
+            this.addFiveModuleButton.Size = new System.Drawing.Size(75, 23);
+            this.addFiveModuleButton.TabIndex = 1;
+            this.addFiveModuleButton.Text = "Add Module";
+            this.addFiveModuleButton.UseVisualStyleBackColor = true;
+            this.addFiveModuleButton.Click += new System.EventHandler(this.addFiveModuleButton_Click);
+            // 
+            // levelFiveLabel
+            // 
+            this.levelFiveLabel.AutoSize = true;
+            this.levelFiveLabel.Location = new System.Drawing.Point(19, 21);
+            this.levelFiveLabel.Name = "levelFiveLabel";
+            this.levelFiveLabel.Size = new System.Drawing.Size(99, 13);
+            this.levelFiveLabel.TabIndex = 0;
+            this.levelFiveLabel.Text = "Level Five Modules";
+            this.levelFiveLabel.Click += new System.EventHandler(this.label1_Click_1);
+            // 
             // tabFour
             // 
+            this.tabFour.Controls.Add(this.addSixModuleButton);
+            this.tabFour.Controls.Add(this.levelSixLabel);
             this.tabFour.Location = new System.Drawing.Point(4, 22);
             this.tabFour.Name = "tabFour";
             this.tabFour.Size = new System.Drawing.Size(464, 365);
@@ -91,8 +183,28 @@
             this.tabFour.Text = "Level Six";
             this.tabFour.UseVisualStyleBackColor = true;
             // 
+            // addSixModuleButton
+            // 
+            this.addSixModuleButton.Location = new System.Drawing.Point(23, 327);
+            this.addSixModuleButton.Name = "addSixModuleButton";
+            this.addSixModuleButton.Size = new System.Drawing.Size(75, 23);
+            this.addSixModuleButton.TabIndex = 1;
+            this.addSixModuleButton.Text = "Add Module";
+            this.addSixModuleButton.UseVisualStyleBackColor = true;
+            this.addSixModuleButton.Click += new System.EventHandler(this.addSixModuleButton_Click);
+            // 
+            // levelSixLabel
+            // 
+            this.levelSixLabel.AutoSize = true;
+            this.levelSixLabel.Location = new System.Drawing.Point(20, 19);
+            this.levelSixLabel.Name = "levelSixLabel";
+            this.levelSixLabel.Size = new System.Drawing.Size(93, 13);
+            this.levelSixLabel.TabIndex = 0;
+            this.levelSixLabel.Text = "Level Six Modules";
+            // 
             // tabFive
             // 
+            this.tabFive.Controls.Add(this.summaryTitleLabel);
             this.tabFive.Location = new System.Drawing.Point(4, 22);
             this.tabFive.Name = "tabFive";
             this.tabFive.Size = new System.Drawing.Size(464, 365);
@@ -100,28 +212,38 @@
             this.tabFive.Text = "Summary";
             this.tabFive.UseVisualStyleBackColor = true;
             // 
-            // buildCourseButton
+            // summaryTitleLabel
             // 
-            this.buildCourseButton.Location = new System.Drawing.Point(19, 17);
-            this.buildCourseButton.Name = "buildCourseButton";
-            this.buildCourseButton.Size = new System.Drawing.Size(75, 23);
-            this.buildCourseButton.TabIndex = 0;
-            this.buildCourseButton.Text = "Build Course";
-            this.buildCourseButton.UseVisualStyleBackColor = true;
-            this.buildCourseButton.Click += new System.EventHandler(this.button1_Click);
+            this.summaryTitleLabel.AutoSize = true;
+            this.summaryTitleLabel.Location = new System.Drawing.Point(20, 18);
+            this.summaryTitleLabel.Name = "summaryTitleLabel";
+            this.summaryTitleLabel.Size = new System.Drawing.Size(98, 13);
+            this.summaryTitleLabel.TabIndex = 0;
+            this.summaryTitleLabel.Text = "Summary of Course";
+            this.summaryTitleLabel.Click += new System.EventHandler(this.label1_Click_2);
             // 
-            // Form1
+            // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(496, 415);
             this.Controls.Add(this.tabControl1);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "mainForm";
             this.ShowIcon = false;
             this.Text = "Degree Calculator";
             this.tabControl1.ResumeLayout(false);
             this.tabOne.ResumeLayout(false);
+            this.tabOne.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabTwo.ResumeLayout(false);
+            this.tabTwo.PerformLayout();
+            this.tabThree.ResumeLayout(false);
+            this.tabThree.PerformLayout();
+            this.tabFour.ResumeLayout(false);
+            this.tabFour.PerformLayout();
+            this.tabFive.ResumeLayout(false);
+            this.tabFive.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -135,6 +257,15 @@
         private System.Windows.Forms.TabPage tabThree;
         private System.Windows.Forms.TabPage tabFour;
         private System.Windows.Forms.TabPage tabFive;
+        private System.Windows.Forms.Label levelFourLabel;
+        private System.Windows.Forms.Label levelFiveLabel;
+        private System.Windows.Forms.Label levelSixLabel;
+        private System.Windows.Forms.Label summaryTitleLabel;
+        private System.Windows.Forms.Label welcomeTextLabel;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button addFourModuleButton;
+        private System.Windows.Forms.Button addFiveModuleButton;
+        private System.Windows.Forms.Button addSixModuleButton;
     }
 }
 

@@ -29,12 +29,17 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.courseNameComboBox = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.firstNameLabel = new System.Windows.Forms.Label();
             this.secondNameLabel = new System.Windows.Forms.Label();
             this.courseNameLabel = new System.Windows.Forms.Label();
+            this.studentDetailsLabel = new System.Windows.Forms.Label();
+            this.courseDetailsLabel = new System.Windows.Forms.Label();
+            this.createCourseButton = new System.Windows.Forms.Button();
+            this.studentIdLabel = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,30 +47,40 @@
             // 
             this.pictureBox1.BackgroundImage = global::degreeCalculator.Properties.Resources.banner_logo_university_of_westminster;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(3, -77);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(478, 232);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // comboBox1
+            // courseNameComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(168, 307);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(191, 21);
-            this.comboBox1.TabIndex = 1;
+            this.courseNameComboBox.FormattingEnabled = true;
+            this.courseNameComboBox.Items.AddRange(new object[] {
+            "Computer Science BSc Honours",
+            "Computer Network Security BSc Honours",
+            "Computer Networks and Communications BSc Honours",
+            "Computer Systems Engineering BEng Honours",
+            "Computer Systems Engineering BSc Honours",
+            "Computer Systems Engineering MEng",
+            "Software Engineering BEng Honours",
+            "Software Engineering MEng"});
+            this.courseNameComboBox.Location = new System.Drawing.Point(115, 271);
+            this.courseNameComboBox.Name = "courseNameComboBox";
+            this.courseNameComboBox.Size = new System.Drawing.Size(191, 21);
+            this.courseNameComboBox.TabIndex = 1;
+            this.courseNameComboBox.SelectedIndexChanged += new System.EventHandler(this.courseNameComboBox_SelectedIndexChanged);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(168, 262);
+            this.textBox1.Location = new System.Drawing.Point(114, 178);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(168, 284);
+            this.textBox2.Location = new System.Drawing.Point(114, 200);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 3;
@@ -73,7 +88,7 @@
             // firstNameLabel
             // 
             this.firstNameLabel.AutoSize = true;
-            this.firstNameLabel.Location = new System.Drawing.Point(105, 262);
+            this.firstNameLabel.Location = new System.Drawing.Point(51, 178);
             this.firstNameLabel.Name = "firstNameLabel";
             this.firstNameLabel.Size = new System.Drawing.Size(57, 13);
             this.firstNameLabel.TabIndex = 4;
@@ -83,7 +98,7 @@
             // secondNameLabel
             // 
             this.secondNameLabel.AutoSize = true;
-            this.secondNameLabel.Location = new System.Drawing.Point(87, 284);
+            this.secondNameLabel.Location = new System.Drawing.Point(33, 200);
             this.secondNameLabel.Name = "secondNameLabel";
             this.secondNameLabel.Size = new System.Drawing.Size(75, 13);
             this.secondNameLabel.TabIndex = 5;
@@ -92,23 +107,72 @@
             // courseNameLabel
             // 
             this.courseNameLabel.AutoSize = true;
-            this.courseNameLabel.Location = new System.Drawing.Point(91, 310);
+            this.courseNameLabel.Location = new System.Drawing.Point(34, 274);
             this.courseNameLabel.Name = "courseNameLabel";
             this.courseNameLabel.Size = new System.Drawing.Size(71, 13);
             this.courseNameLabel.TabIndex = 6;
             this.courseNameLabel.Text = "Course Name";
+            // 
+            // studentDetailsLabel
+            // 
+            this.studentDetailsLabel.AutoSize = true;
+            this.studentDetailsLabel.Location = new System.Drawing.Point(13, 162);
+            this.studentDetailsLabel.Name = "studentDetailsLabel";
+            this.studentDetailsLabel.Size = new System.Drawing.Size(79, 13);
+            this.studentDetailsLabel.TabIndex = 7;
+            this.studentDetailsLabel.Text = "Student Details";
+            // 
+            // courseDetailsLabel
+            // 
+            this.courseDetailsLabel.AutoSize = true;
+            this.courseDetailsLabel.Location = new System.Drawing.Point(17, 250);
+            this.courseDetailsLabel.Name = "courseDetailsLabel";
+            this.courseDetailsLabel.Size = new System.Drawing.Size(75, 13);
+            this.courseDetailsLabel.TabIndex = 8;
+            this.courseDetailsLabel.Text = "Course Details";
+            // 
+            // createCourseButton
+            // 
+            this.createCourseButton.Location = new System.Drawing.Point(19, 338);
+            this.createCourseButton.Name = "createCourseButton";
+            this.createCourseButton.Size = new System.Drawing.Size(102, 23);
+            this.createCourseButton.TabIndex = 9;
+            this.createCourseButton.Text = "Create Course";
+            this.createCourseButton.UseVisualStyleBackColor = true;
+            this.createCourseButton.Click += new System.EventHandler(this.createCourseButton_Click);
+            // 
+            // studentIdLabel
+            // 
+            this.studentIdLabel.AutoSize = true;
+            this.studentIdLabel.Location = new System.Drawing.Point(47, 224);
+            this.studentIdLabel.Name = "studentIdLabel";
+            this.studentIdLabel.Size = new System.Drawing.Size(58, 13);
+            this.studentIdLabel.TabIndex = 10;
+            this.studentIdLabel.Text = "Student ID";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(114, 221);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 11;
             // 
             // buildCourseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(476, 376);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.studentIdLabel);
+            this.Controls.Add(this.createCourseButton);
+            this.Controls.Add(this.courseDetailsLabel);
+            this.Controls.Add(this.studentDetailsLabel);
             this.Controls.Add(this.courseNameLabel);
             this.Controls.Add(this.secondNameLabel);
             this.Controls.Add(this.firstNameLabel);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.courseNameComboBox);
             this.Controls.Add(this.pictureBox1);
             this.Name = "buildCourseForm";
             this.Text = "Build Your Course";
@@ -121,11 +185,16 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox courseNameComboBox;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label firstNameLabel;
         private System.Windows.Forms.Label secondNameLabel;
         private System.Windows.Forms.Label courseNameLabel;
+        private System.Windows.Forms.Label studentDetailsLabel;
+        private System.Windows.Forms.Label courseDetailsLabel;
+        private System.Windows.Forms.Button createCourseButton;
+        private System.Windows.Forms.Label studentIdLabel;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

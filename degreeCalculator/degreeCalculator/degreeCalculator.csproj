@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addModuleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addModuleForm.Designer.cs">
+      <DependentUpon>addModuleForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="mainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="addModuleForm.resx">
+      <DependentUpon>addModuleForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="buildCourseForm.resx">
       <DependentUpon>buildCourseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -74,6 +83,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -89,6 +99,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\banner-logo-university-of-westminster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logofinal.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

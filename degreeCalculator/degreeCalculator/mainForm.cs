@@ -19,12 +19,53 @@ namespace degreeCalculator
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            buildCourseForm buildForm = new buildCourseForm();
+            buildForm.Show();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void welcomeTextLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addFourModuleButton_Click(object sender, EventArgs e)
+        {
+            addModuleForm addModule = new addModuleForm();
+            addModule.Show();
+        }
+
+        private void addFiveModuleButton_Click(object sender, EventArgs e)
+        {
+            addModuleForm addModule = new addModuleForm();
+            addModule.Show();
+        }
+
+        private void addSixModuleButton_Click(object sender, EventArgs e)
+        {
+            addModuleForm addModule = new addModuleForm();
+            addModule.Show();
         }
     }
 }
