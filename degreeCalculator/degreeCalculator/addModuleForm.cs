@@ -21,16 +21,23 @@ namespace degreeCalculator
         ArrayList moduleWeight = new ArrayList();
         ArrayList notesLabel = new ArrayList();
         int length = 0;
+        String ModuleLevel;
        
 
-        public addModuleForm()
+        public addModuleForm(String level)
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            ModuleLevel = level;
+            levelPlaceholder.Text = ModuleLevel;
         }
 
         private void createAssessButton_Click(object sender, EventArgs e)
         {
-            length = (int)this.numericUpDownAssessment.Value;
+           length = (int)this.numericUpDownAssessment.Value;
+           
+           
+             //populate 
             for (int i = 0; i < length; i++)
             {
                 //instantiate and configure the text boxes
@@ -124,6 +131,11 @@ namespace degreeCalculator
         }
 
         private void submitModuleButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void levelTextLabel_Click(object sender, EventArgs e)
         {
 
         }

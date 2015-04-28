@@ -1,0 +1,15 @@
+﻿<Degree>
+  <CourseName>Computer Science BSc Honours</CourseName>
+  <Person>
+    <FirstName>Nathan</FirstName>
+    <SecondName>Bell</SecondName>
+    <StudentId>W1442439</StudentId>
+  </Person>
+  <Module>
+	<ModuleName>Computer Systems Fundamentals</ModuleName>
+	<ModuleCode>ECSC404</ModuleCode>
+	<ModuleLevel>Four</ModuleLevel>
+	<ModuleSemester>SEM1</ModuleSemester>
+	<ModuleCredits>15</ModuleCredits>
+  </Module>
+</Degree>

@@ -50,6 +50,7 @@
     <Compile Include="addModuleForm.Designer.cs">
       <DependentUpon>addModuleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="courseInformation.cs" />
     <Compile Include="mainForm.cs">
       <SubType>Form</SubType>
     </Compile>

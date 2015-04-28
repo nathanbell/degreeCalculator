@@ -30,8 +30,8 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.courseNameComboBox = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.firstNameTextBox = new System.Windows.Forms.TextBox();
+            this.secondNameTextBox = new System.Windows.Forms.TextBox();
             this.firstNameLabel = new System.Windows.Forms.Label();
             this.secondNameLabel = new System.Windows.Forms.Label();
             this.courseNameLabel = new System.Windows.Forms.Label();
@@ -39,7 +39,7 @@
             this.courseDetailsLabel = new System.Windows.Forms.Label();
             this.createCourseButton = new System.Windows.Forms.Button();
             this.studentIdLabel = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.studentIdTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,19 +71,19 @@
             this.courseNameComboBox.TabIndex = 1;
             this.courseNameComboBox.SelectedIndexChanged += new System.EventHandler(this.courseNameComboBox_SelectedIndexChanged);
             // 
-            // textBox1
+            // firstNameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(114, 178);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.firstNameTextBox.Location = new System.Drawing.Point(114, 178);
+            this.firstNameTextBox.Name = "firstNameTextBox";
+            this.firstNameTextBox.Size = new System.Drawing.Size(192, 20);
+            this.firstNameTextBox.TabIndex = 2;
             // 
-            // textBox2
+            // secondNameTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(114, 200);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.secondNameTextBox.Location = new System.Drawing.Point(114, 200);
+            this.secondNameTextBox.Name = "secondNameTextBox";
+            this.secondNameTextBox.Size = new System.Drawing.Size(192, 20);
+            this.secondNameTextBox.TabIndex = 3;
             // 
             // firstNameLabel
             // 
@@ -150,19 +150,19 @@
             this.studentIdLabel.TabIndex = 10;
             this.studentIdLabel.Text = "Student ID";
             // 
-            // textBox3
+            // studentIdTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(114, 221);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 11;
+            this.studentIdTextBox.Location = new System.Drawing.Point(114, 221);
+            this.studentIdTextBox.Name = "studentIdTextBox";
+            this.studentIdTextBox.Size = new System.Drawing.Size(192, 20);
+            this.studentIdTextBox.TabIndex = 11;
             // 
             // buildCourseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(476, 376);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.studentIdTextBox);
             this.Controls.Add(this.studentIdLabel);
             this.Controls.Add(this.createCourseButton);
             this.Controls.Add(this.courseDetailsLabel);
@@ -170,8 +170,8 @@
             this.Controls.Add(this.courseNameLabel);
             this.Controls.Add(this.secondNameLabel);
             this.Controls.Add(this.firstNameLabel);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.secondNameTextBox);
+            this.Controls.Add(this.firstNameTextBox);
             this.Controls.Add(this.courseNameComboBox);
             this.Controls.Add(this.pictureBox1);
             this.Name = "buildCourseForm";
@@ -186,8 +186,8 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox courseNameComboBox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox firstNameTextBox;
+        private System.Windows.Forms.TextBox secondNameTextBox;
         private System.Windows.Forms.Label firstNameLabel;
         private System.Windows.Forms.Label secondNameLabel;
         private System.Windows.Forms.Label courseNameLabel;
@@ -195,6 +195,6 @@
         private System.Windows.Forms.Label courseDetailsLabel;
         private System.Windows.Forms.Button createCourseButton;
         private System.Windows.Forms.Label studentIdLabel;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox studentIdTextBox;
     }
 }

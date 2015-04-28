@@ -1,0 +1,11 @@
+F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\bin\Release\degreeCalculator.exe.config
+F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\bin\Release\degreeCalculator.exe
+F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\bin\Release\degreeCalculator.pdb
+F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\obj\Release\degreeCalculator.addModuleForm.resources
+F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\obj\Release\degreeCalculator.buildCourseForm.resources
+F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\obj\Release\degreeCalculator.mainForm.resources
+F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\obj\Release\degreeCalculator.Properties.Resources.resources
+F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\obj\Release\degreeCalculator.csproj.GenerateResource.Cache
+F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\obj\Release\degreeCalculator.exe
+F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\obj\Release\degreeCalculator.pdb
+F:\Documents\GitHub\degreeCalculator\degreeCalculator\degreeCalculator\obj\Release\degreeCalculator.csprojResolveAssemblyReference.cache
