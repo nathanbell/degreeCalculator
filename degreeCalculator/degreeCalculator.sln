@@ -5,8 +5,6 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "degreeCalculator", "degreeCalculator\degreeCalculator.csproj", "{5F56B979-9F72-4165-B27B-5E0004C73B12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicInterfaceTutorial", "..\..\..\University\CSharp\DynamicInterfaceTutorial_solwithbuttons\DynamicInterfaceTutorial\DynamicInterfaceTutorial\DynamicInterfaceTutorial.csproj", "{3D3435AA-7C79-4D3E-86C2-86E08A6C819F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,16 +25,6 @@ Global
 		{5F56B979-9F72-4165-B27B-5E0004C73B12}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{5F56B979-9F72-4165-B27B-5E0004C73B12}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{5F56B979-9F72-4165-B27B-5E0004C73B12}.Release|x86.ActiveCfg = Release|Any CPU
-		{3D3435AA-7C79-4D3E-86C2-86E08A6C819F}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{3D3435AA-7C79-4D3E-86C2-86E08A6C819F}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{3D3435AA-7C79-4D3E-86C2-86E08A6C819F}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{3D3435AA-7C79-4D3E-86C2-86E08A6C819F}.Debug|x86.ActiveCfg = Debug|x86
-		{3D3435AA-7C79-4D3E-86C2-86E08A6C819F}.Debug|x86.Build.0 = Debug|x86
-		{3D3435AA-7C79-4D3E-86C2-86E08A6C819F}.Release|Any CPU.ActiveCfg = Release|x86
-		{3D3435AA-7C79-4D3E-86C2-86E08A6C819F}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{3D3435AA-7C79-4D3E-86C2-86E08A6C819F}.Release|Mixed Platforms.Build.0 = Release|x86
-		{3D3435AA-7C79-4D3E-86C2-86E08A6C819F}.Release|x86.ActiveCfg = Release|x86
-		{3D3435AA-7C79-4D3E-86C2-86E08A6C819F}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

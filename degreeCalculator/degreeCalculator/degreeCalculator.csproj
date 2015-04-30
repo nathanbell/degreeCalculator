@@ -50,6 +50,7 @@
     <Compile Include="addModuleForm.Designer.cs">
       <DependentUpon>addModuleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Assessment.cs" />
     <Compile Include="courseInformation.cs" />
     <Compile Include="mainForm.cs">
       <SubType>Form</SubType>
@@ -63,6 +64,8 @@
     <Compile Include="buildCourseForm.Designer.cs">
       <DependentUpon>buildCourseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="modelViewController.cs" />
+    <Compile Include="ModuleModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="addModuleForm.resx">

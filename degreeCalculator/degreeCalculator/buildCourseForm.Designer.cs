@@ -73,6 +73,7 @@
             // 
             // firstNameTextBox
             // 
+            this.firstNameTextBox.AcceptsTab = true;
             this.firstNameTextBox.Location = new System.Drawing.Point(114, 178);
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(192, 20);
@@ -80,6 +81,7 @@
             // 
             // secondNameTextBox
             // 
+            this.secondNameTextBox.AcceptsTab = true;
             this.secondNameTextBox.Location = new System.Drawing.Point(114, 200);
             this.secondNameTextBox.Name = "secondNameTextBox";
             this.secondNameTextBox.Size = new System.Drawing.Size(192, 20);
@@ -152,6 +154,7 @@
             // 
             // studentIdTextBox
             // 
+            this.studentIdTextBox.AcceptsTab = true;
             this.studentIdTextBox.Location = new System.Drawing.Point(114, 221);
             this.studentIdTextBox.Name = "studentIdTextBox";
             this.studentIdTextBox.Size = new System.Drawing.Size(192, 20);

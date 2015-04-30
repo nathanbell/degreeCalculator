@@ -20,29 +20,43 @@ namespace degreeCalculator
         ArrayList comboBoxes = new ArrayList();
         ArrayList moduleWeight = new ArrayList();
         ArrayList notesLabel = new ArrayList();
+        ArrayList assTextBoxes = new ArrayList();
         int length = 0;
         String ModuleLevel;
-       
+        Boolean comboPresent;
+        Boolean weightTotal;
+        int weightTotalInt;
+        modelViewController generalController;
+
+        public void setController(modelViewController controller)
+        {
+            generalController = controller;
+        }     
+        
+        
 
         public addModuleForm(String level)
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             ModuleLevel = level;
-            levelPlaceholder.Text = ModuleLevel;
+
         }
 
         private void createAssessButton_Click(object sender, EventArgs e)
         {
-           length = (int)this.numericUpDownAssessment.Value;
-           
-           
-             //populate 
+            length = (int)this.numericUpDownAssessment.Value;
+
+
+            //populate 
             for (int i = 0; i < length; i++)
             {
                 //instantiate and configure the text boxes
                 textboxComputer.Add(new TextBox());
                 System.Drawing.Point p = new System.Drawing.Point(340, 170 + i * 25);
+                (textboxComputer[i] as TextBox).Location = p;
+                (textboxComputer[i] as TextBox).Size = new System.Drawing.Size(180, 20);
 
                 //instantiate and configure the combo boxes
                 comboBoxes.Add(new ComboBox());
@@ -53,8 +67,7 @@ namespace degreeCalculator
                 System.Drawing.Point b = new System.Drawing.Point(245, 170 + i * 25);
 
                 //to evoke an object in an ArrayList we use the 'as' keyword
-                (textboxComputer[i] as TextBox).Location = p;
-                (textboxComputer[i] as TextBox).Size = new System.Drawing.Size(180, 20);
+
 
                 //evoke comboboxes
                 (comboBoxes[i] as ComboBox).Location = a;
@@ -63,12 +76,13 @@ namespace degreeCalculator
                 (comboBoxes[i] as ComboBox).Items.Add("Coursework");
                 (comboBoxes[i] as ComboBox).Items.Add("Exam");
                 (comboBoxes[i] as ComboBox).Items.Add("Portfolio");
-                
+
 
                 //evoke moduleWeight
                 (moduleWeight[i] as ComboBox).Location = b;
                 (moduleWeight[i] as ComboBox).Size = new System.Drawing.Size(45, 20);
                 (moduleWeight[i] as ComboBox).DropDownStyle = ComboBoxStyle.DropDownList;
+                (moduleWeight[i] as ComboBox).Items.Add("0");
                 (moduleWeight[i] as ComboBox).Items.Add("10");
                 (moduleWeight[i] as ComboBox).Items.Add("20");
                 (moduleWeight[i] as ComboBox).Items.Add("30");
@@ -79,7 +93,8 @@ namespace degreeCalculator
                 (moduleWeight[i] as ComboBox).Items.Add("80");
                 (moduleWeight[i] as ComboBox).Items.Add("90");
                 (moduleWeight[i] as ComboBox).Items.Add("100");
-                
+                (moduleWeight[i] as ComboBox).SelectedIndex = 0;
+
 
                 //use 'as' again here to add the control to the controls Collection
                 this.Controls.Add(textboxComputer[i] as TextBox);
@@ -111,16 +126,12 @@ namespace degreeCalculator
                 (notesLabel[i] as Label).Text = "Notes:";
                 this.Controls.Add((notesLabel[i] as Label));
 
-                //add some mouse events
-                //(textboxComputer[i] as TextBox).MouseEnter += new System.EventHandler(this.textBox_mouseEnter);
-                //(textboxComputer[i] as TextBox).MouseLeave += new System.EventHandler(this.textBox_mouseLeave);
 
-                //add the radio buttons - these are already sized  (See RadioButtons.cs) so just need to place at a point
-                //radioButtons.Add(new RadioButtons());
-                //(radioButtons[i] as RadioButtons).Location = new System.Drawing.Point(370, 110 + i * 25);
-                //this.Controls.Add(radioButtons[i] as RadioButtons);
             }
         }
+
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -132,7 +143,90 @@ namespace degreeCalculator
 
         private void submitModuleButton_Click(object sender, EventArgs e)
         {
+            comboPresent = false;
+            weightTotal = false;
+            weightTotalInt = 0;
+            
+            for (int h = 0; h < comboBoxes.Count; h++)
+                {
+                    if (String.IsNullOrEmpty((comboBoxes[h] as ComboBox).Text) || String.IsNullOrEmpty((moduleWeight[h] as ComboBox).Text))
+                    {
+                        
+                        comboPresent = true;
+                        
+                    }
+                }
 
+            for (int i = 0; i < moduleWeight.Count; i++)
+            {
+                weightTotalInt += Int32.Parse((moduleWeight[i] as ComboBox).Text);
+            }
+
+            if (weightTotalInt != 100){
+                weightTotal = true;
+            }
+
+            if (String.IsNullOrEmpty(moduleNameTextbox.Text) || String.IsNullOrEmpty(moduleCodeTextbox.Text))
+            {
+                
+                    MessageBox.Show("Please make sure you input all fields.");
+                
+            }
+           else if (moduleCodeTextbox.TextLength > 8 || moduleCodeTextbox.TextLength < 5)
+           {
+               MessageBox.Show("The Module Code is incorrect. The Module Code must be between 5 and 8 characters in length.");
+           }
+                
+            else if (String.IsNullOrEmpty(creditCombobox.Text) || String.IsNullOrEmpty(semesterCombobox.Text))
+            {
+                MessageBox.Show("Please make sure you input all fields.");
+            }
+
+            else if (moduleWeight.Count == 0)
+            {
+                MessageBox.Show("You must add at least one assessment to the module.");
+            }
+
+            else if (comboPresent)
+            {
+                MessageBox.Show("Please make sure you input all fields.");
+            }
+
+            else if (weightTotal)
+            {
+                MessageBox.Show("The assessment's weights are not totally 100%. The assessments must have a combined weight of 100%.");
+            }
+
+            else
+            {
+
+                generalController.createModule(moduleNameTextbox.Text, moduleCodeTextbox.Text, length, semesterCombobox.Text, Int32.Parse(creditCombobox.Text), ModuleLevel);
+
+
+                generalController.mainView.generateModule();
+
+                Close();
+                
+            }
+
+           // mainForm.Refresh();
+        }
+
+        public bool emptyFields()
+        {
+            if (moduleNameTextbox.TextLength < 1 || moduleCodeTextbox.TextLength < 1 /*|| string.IsNullOrEmpty(semesterCombobox.SelectedText) || string.IsNullOrEmpty(creditCombobox.SelectedText)*/) 
+            {
+                MessageBox.Show("Please do not leave any fields blank, all are required.");
+                Console.WriteLine(moduleNameTextbox);
+                Console.WriteLine(moduleCodeTextbox);
+                Console.WriteLine(semesterCombobox.SelectedValue.ToString());
+                Console.WriteLine(creditCombobox.SelectedValue.ToString());
+                return true;
+
+                
+            }
+            return true;
+            
         }
 
         private void levelTextLabel_Click(object sender, EventArgs e)

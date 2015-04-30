@@ -32,18 +32,17 @@
             this.semesterTextLabel = new System.Windows.Forms.Label();
             this.creditsTextLabel = new System.Windows.Forms.Label();
             this.levelTextLabel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.moduleNameTextbox = new System.Windows.Forms.TextBox();
+            this.semesterCombobox = new System.Windows.Forms.ComboBox();
+            this.creditCombobox = new System.Windows.Forms.ComboBox();
             this.moduleCodeTextLabel = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.moduleCodeTextbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.submitModuleButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.createAssessButton = new System.Windows.Forms.Button();
             this.numericUpDownAssessment = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
             this.levelPlaceholder = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAssessment)).BeginInit();
             this.SuspendLayout();
@@ -85,37 +84,36 @@
             this.levelTextLabel.Text = "Level:";
             this.levelTextLabel.Click += new System.EventHandler(this.levelTextLabel_Click);
             // 
-            // textBox1
+            // moduleNameTextbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(179, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(237, 20);
-            this.textBox1.TabIndex = 4;
+            this.moduleNameTextbox.AcceptsTab = true;
+            this.moduleNameTextbox.Location = new System.Drawing.Point(179, 29);
+            this.moduleNameTextbox.Name = "moduleNameTextbox";
+            this.moduleNameTextbox.Size = new System.Drawing.Size(237, 20);
+            this.moduleNameTextbox.TabIndex = 4;
             // 
-            // comboBox2
+            // semesterCombobox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.semesterCombobox.FormattingEnabled = true;
+            this.semesterCombobox.Items.AddRange(new object[] {
             "One",
             "Two",
             "Year Long"});
-            this.comboBox2.Location = new System.Drawing.Point(179, 84);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(62, 21);
-            this.comboBox2.TabIndex = 6;
+            this.semesterCombobox.Location = new System.Drawing.Point(179, 84);
+            this.semesterCombobox.Name = "semesterCombobox";
+            this.semesterCombobox.Size = new System.Drawing.Size(62, 21);
+            this.semesterCombobox.TabIndex = 6;
             // 
-            // comboBox3
+            // creditCombobox
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.creditCombobox.FormattingEnabled = true;
+            this.creditCombobox.Items.AddRange(new object[] {
             "15",
-            "30",
-            "45",
-            "60"});
-            this.comboBox3.Location = new System.Drawing.Point(301, 84);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(61, 21);
-            this.comboBox3.TabIndex = 7;
+            "30"});
+            this.creditCombobox.Location = new System.Drawing.Point(301, 84);
+            this.creditCombobox.Name = "creditCombobox";
+            this.creditCombobox.Size = new System.Drawing.Size(61, 21);
+            this.creditCombobox.TabIndex = 7;
             // 
             // moduleCodeTextLabel
             // 
@@ -126,13 +124,14 @@
             this.moduleCodeTextLabel.TabIndex = 8;
             this.moduleCodeTextLabel.Text = "Module Code:";
             // 
-            // textBox2
+            // moduleCodeTextbox
             // 
-            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox2.Location = new System.Drawing.Point(179, 56);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(62, 20);
-            this.textBox2.TabIndex = 9;
+            this.moduleCodeTextbox.AcceptsTab = true;
+            this.moduleCodeTextbox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.moduleCodeTextbox.Location = new System.Drawing.Point(179, 56);
+            this.moduleCodeTextbox.Name = "moduleCodeTextbox";
+            this.moduleCodeTextbox.Size = new System.Drawing.Size(62, 20);
+            this.moduleCodeTextbox.TabIndex = 9;
             // 
             // label1
             // 
@@ -173,6 +172,9 @@
             // 
             // createAssessButton
             // 
+            this.createAssessButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.createAssessButton.Location = new System.Drawing.Point(238, 135);
             this.createAssessButton.Name = "createAssessButton";
             this.createAssessButton.Size = new System.Drawing.Size(75, 23);
@@ -203,16 +205,6 @@
             0,
             0});
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(489, 315);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Print";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // levelPlaceholder
             // 
             this.levelPlaceholder.AutoSize = true;
@@ -224,22 +216,21 @@
             // 
             // addModuleForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            //this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+           // this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(576, 373);
             this.Controls.Add(this.levelPlaceholder);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.numericUpDownAssessment);
             this.Controls.Add(this.createAssessButton);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.submitModuleButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.moduleCodeTextbox);
             this.Controls.Add(this.moduleCodeTextLabel);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.creditCombobox);
+            this.Controls.Add(this.semesterCombobox);
+            this.Controls.Add(this.moduleNameTextbox);
             this.Controls.Add(this.levelTextLabel);
             this.Controls.Add(this.creditsTextLabel);
             this.Controls.Add(this.semesterTextLabel);
@@ -258,18 +249,17 @@
         private System.Windows.Forms.Label semesterTextLabel;
         private System.Windows.Forms.Label creditsTextLabel;
         private System.Windows.Forms.Label levelTextLabel;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.TextBox moduleNameTextbox;
+        private System.Windows.Forms.ComboBox semesterCombobox;
+        private System.Windows.Forms.ComboBox creditCombobox;
         private System.Windows.Forms.Label moduleCodeTextLabel;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox moduleCodeTextbox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button submitModuleButton;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button createAssessButton;
         private System.Windows.Forms.NumericUpDown numericUpDownAssessment;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label levelPlaceholder;
     }
 }

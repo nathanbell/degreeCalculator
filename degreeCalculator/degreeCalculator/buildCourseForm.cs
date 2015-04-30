@@ -14,10 +14,11 @@ namespace degreeCalculator
     public partial class buildCourseForm : Form
     {
        public courseInformation userInfo;
+
        public buildCourseForm()
         {
-            
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             
             
@@ -37,6 +38,23 @@ namespace degreeCalculator
         {
              
             userInfo = new courseInformation();
+
+            if (studentIdTextBox.TextLength < 7 || studentIdTextBox.TextLength > 8)
+            {
+                MessageBox.Show("The Student ID you have entered is incorrect." + "\n" + "Your Student ID should be 8 characters in length." + "\n" +"For example W1234567");
+            }
+            else if (firstNameTextBox.Text.Length < 1 || secondNameTextBox.Text.Length < 1)
+            {
+                MessageBox.Show("Please enter a valid first and second name.");
+           
+            }
+
+            else if (courseNameComboBox.Text.Length < 5)
+            {
+                MessageBox.Show("Please enter a valid course name.");
+            }
+            
+            else{
 
             userInfo.userFirstNameFinal = firstNameTextBox.Text;
             userInfo.userSecondName = secondNameTextBox.Text;
@@ -68,7 +86,7 @@ namespace degreeCalculator
             mainForm main = new mainForm();
             main.ShowDialog();
             this.Close();
-            
+            }
         }
     }
 }
